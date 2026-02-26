@@ -1,9 +1,5 @@
-/* app vr3.js - AI Recommendation Update
-  既存機能を保持し、AIおすすめ機能のみを追加 
-*/
-
 const YT = {
-    keys: ["AIzaSyBfCvyZ_J9mJiMFNYB6WfcuLyvf9zDdcUU", "AIzaSyCgVn-JWHKT_z6EC73Z6Vlex0F_d-BP_fY", "AIzaSyBbqPhAbqoWDOurTt7hejQmwc6dAoZ5Iy0", "AIzaSyAWk9mmie23-khi8-nipv1jHJND__UtEWA", "AIzaSyBL38iyqeiaKHoKqhloSnhG590DfJ35vCE"],
+    keys: ["ここにYouTube apiキーを入れる"],
     currentEduKey: "",
 
     async refreshEduKey() {
@@ -112,7 +108,7 @@ const Actions = {
                     historyNav.insertAdjacentHTML('beforebegin', '<div id="nav-watch-later" class="nav-item" onclick="Actions.showWatchLater()">📌<span>後で見る</span></div>');
                 }
             }
-            // AIおすすめボタンの追加 (NEW!)
+            // AIおすすめボタンの追加 
             if (!document.getElementById('nav-ai-recommend')) {
                 const homeNav = document.querySelector('.sidebar .nav-item[onclick="Actions.goHome()"]');
                 if (homeNav) {
@@ -122,7 +118,7 @@ const Actions = {
         }
     },
 
-    // --- AIおすすめ機能 (NEW!) ---
+    // --- AIおすすめ機能  ---
     async showAIRecommendations() {
         this.currentView = "ai_recommend";
         const container = document.getElementById('view-container');
